@@ -776,13 +776,13 @@ body {
   .tt-des { font-size: 0.65rem; }
   
   [data-tooltip]:hover::after {
-    max-width: 80vw;
-    right: 0;
-    left: auto;
+    max-width: 85vw;
+    left: -10px;
+    right: auto;
   }
   
   .tooltip-bottom[data-tooltip]:hover::after {
-    left: 0;
-    right: auto;
+    right: -10px;
+    left: auto;
   }
 }
