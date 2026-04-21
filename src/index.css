@@ -701,3 +701,88 @@ body {
   left: 0;
   max-width: 300px;
 }
+
+/* ── Responsive Mobile Overrides ─────────────────────────────────────── */
+@media (max-width: 600px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .header-meta {
+    width: 100%;
+    gap: 0.5rem;
+  }
+  
+  .app-main {
+    padding: 1rem 1rem 1.5rem;
+  }
+  
+  .selector-wrap {
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+  }
+  
+  .game-select {
+    width: 100%;
+    min-width: unset;
+  }
+  
+  .stats-row {
+    flex-wrap: wrap;
+  }
+  
+  .stat-badge {
+    width: 50%;
+    min-width: unset;
+    padding: 1rem 0.5rem;
+    border-right: none;
+  }
+  
+  .stat-badge:nth-child(1),
+  .stat-badge:nth-child(2) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .stat-badge:nth-child(odd) {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .stat-val {
+    font-size: 1.4rem;
+  }
+  
+  .stat-lbl {
+    font-size: 0.65rem;
+  }
+  
+  .chart-legend {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem !important;
+    border-radius: 12px !important;
+  }
+  
+  .chart-tooltip {
+    min-width: 160px;
+    max-width: 180px;
+    padding: 0.5rem 0.65rem;
+  }
+  
+  .tt-name { font-size: 0.8rem; }
+  .tt-row span:last-child { font-size: 0.7rem; }
+  .tt-des { font-size: 0.65rem; }
+  
+  [data-tooltip]:hover::after {
+    max-width: 80vw;
+    right: 0;
+    left: auto;
+  }
+  
+  .tooltip-bottom[data-tooltip]:hover::after {
+    left: 0;
+    right: auto;
+  }
+}
