@@ -199,12 +199,16 @@ function RealisticTooltip({ d, x, y }) {
   const isInZone = distFt < 0.12
   const missedInches = (distFt * 12).toFixed(1)
 
-  // Position tooltip based on location
+  // Position tooltip based on location to prevent clipping
   const isRight = x > 50
+  let yTransform = '-50%'
+  if (y > 75) yTransform = '-100%'
+  else if (y < 25) yTransform = '0%'
+  
   const style = {
     top: `${y}%`,
     [isRight ? 'right' : 'left']: `${isRight ? 100 - x + 2 : x + 2}%`,
-    transform: `translateY(-50%)`,
+    transform: `translateY(${yTransform})`,
     position: 'absolute',
     zIndex: 20
   }
