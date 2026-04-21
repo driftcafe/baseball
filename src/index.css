@@ -777,12 +777,16 @@ body {
   
   [data-tooltip]:hover::after {
     max-width: 85vw;
-    left: -10px;
+    width: 240px;
+    left: 50%;
     right: auto;
+    transform: translateX(-50%);
   }
   
   .tooltip-bottom[data-tooltip]:hover::after {
-    right: -10px;
-    left: auto;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: 260px;
   }
 }
